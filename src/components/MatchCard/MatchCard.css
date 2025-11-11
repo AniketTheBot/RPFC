@@ -9,7 +9,7 @@
   overflow: hidden;
   padding: 2rem 2.5rem; /* extra space for balance */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   color: #fff;
