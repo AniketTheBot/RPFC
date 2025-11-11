@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.players-section {
+  width: 100vw;
+  background-color: #2C3813;
+  padding: 5vh 2vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.players-title {
+  color: #fff;
+  font-family: "Anton", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.players-scroll {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 2vh;
+}
+
+.players-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.loader-container {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Anton", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top: 5px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hide the players until all images are loaded */
+.players-scroll.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.players-scroll.visible {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+

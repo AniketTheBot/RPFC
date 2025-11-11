@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Anton", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.nav-links button:hover {
+  opacity: 0.7;
+}
+
+.nav-icon a {
+  color: #ffffff;
+  font-size: 22px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-icon a:hover {
+  transform: scale(1.15);
+  color: #e1306c; /* Instagram pink tone */
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links button {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-icon a {
+    font-size: 18px;
+  }
+}

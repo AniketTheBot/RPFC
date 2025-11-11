@@ -1,0 +1,29 @@
+.match-card {
+  width: 100%;
+  border: 1px solid #ffffff;
+  background-color: rgba(217, 217, 217, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.match-card:hover {
+  background-color: rgba(217, 217, 217, 0.25);
+  transform: scale(1.02);
+}
+
+.match-card span {
+  font-family: "Anton", sans-serif;
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.match-card .mid {
+  opacity: 0.6;
+  font-family: "Inter", sans-serif;
+}

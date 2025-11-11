@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* push content to bottom */
+  background-size: cover;         /* ✅ fills entire area */
+  background-repeat: no-repeat;   /* ✅ prevents tiling */
+  background-position: center;    /* ✅ centers image */
+  background-attachment: fixed;   /* ✅ makes it immersive (optional) */
+}
+
+/* RPFC bottom-right */
+.hero-content {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  text-align: right;
+  color: #5c6cff;
+  z-index: 5;
+}
+
+.rpfc-title {
+  font-family: "Climate Crisis", cursive;
+  font-size: 12rem;
+  font-weight: 900;
+  letter-spacing: -5px;
+  color: #5c6cff;
+  line-height: 1;
+}
+
+
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero::before {
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.1); /* extra zoom for iOS safe area */
+  }
+
+  .rpfc-title {
+    font-size: clamp(3rem, 18vw, 7rem);
+    letter-spacing: -2px;
+  }
+}
+
+
+
+.info-section {
+  height: 100vh;
+  width: 100vw;
+  background-color: #2C3813;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 4vh 4vw;
+  box-sizing: border-box;
+  overflow: hidden;
+  gap: 2vw; /* space between cards */
+}
+
+.info-card {
+  flex: 1;
+  background-color: rgba(217, 217, 217, 0.2); /* #D9D9D9 20% */
+  border: 1px solid #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 3vh 2vw;
+}
+
+/* Inside content wrapper */
+.card-content {
+  text-align: center;
+  color: white;
+  max-width: 85%;
+}
+
+.card-content h2 {
+  font-family: 'Anton', sans-serif;
+  font-size: 5vw; /* scales responsively (~110px at 1366px) */
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.card-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+
+/* === ABE HUM HAI KONN?? SECTION === */
+.who-section {
+  height: 100vh;
+  width: 100vw;
+  background-color: #2C3813;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* The text */
+.who-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 22vw;
+  line-height: 75%;
+  letter-spacing: -0.06em;
+  color: #5C6FF4;
+  text-transform: uppercase;
+  white-space: pre-line;
+  user-select: none;
+  overflow: visible;
+  position: absolute;
+  top: -4vh;
+  left: -4vw;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .who-text {
+    font-size: 26vw;
+    top: -3vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .who-text {
+    font-size: 28vw;
+    top: -2vh;
+  }
+}
+
+/* The grid overlay */
+.who-section::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* top: 0; right: 0; bottom: 0; left: 0 */
+  background-image:
+    linear-gradient(rgba(255, 0, 0, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.15) 1px, transparent 1px);
+  background-size: 10px 10px;
+  z-index: 2; /* above the text */
+  pointer-events: none; /* lets clicks pass through */
+}
+/* Optional: remove scrollbars globally */
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .who-section {
+    height: auto; /* 👈 now adapts to text height */
+    min-height: 35vh; /* 👈 keeps some breathing space */
+    padding: 40px 0; /* optional vertical padding */
+  }
+  .who-text {
+    font-size: clamp(100px, 26vmin, 220px); /* 👈 larger, fills better on phones */
+    top: -3vmin;
+    left: -3vmin;
+    line-height: 80%;
+    letter-spacing: -0.04em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Scrollabe Banner */
+/* .who-section {
+  position: relative;
+  height: 22vh; 
+  width: 100vw;
+  background-color: #2c3813;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+
+.who-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 0, 0, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.12) 1px, transparent 1px);
+  background-size: 6px 6px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+.who-text-wrapper {
+  position: absolute;
+  left: 0;
+  width: max-content;
+  display: flex;
+  animation: scrollText 30s linear infinite;
+  z-index: 2;
+}
+
+
+.who-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: clamp(120px, 14vmin, 250px); 
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #5C6FF4;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-right: 5vw;
+  user-select: none;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+} */
