@@ -231,7 +231,7 @@
 @media (max-width: 768px) {
   .who-section {
     height: auto; /* 👈 now adapts to text height */
-    min-height: 35vh; /* 👈 keeps some breathing space */
+    min-height: 40vh; /* 👈 keeps some breathing space */
     padding: 40px 0; /* optional vertical padding */
   }
   .who-text {

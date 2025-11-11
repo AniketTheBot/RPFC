@@ -12,7 +12,8 @@ import Tarush from "../../assets/playerPhotos/Tarush.jpg";
 import Vihaan from "../../assets/playerPhotos/vihaan.jpg";
 import Yash from "../../assets/playerPhotos/Yash.jpg";
 import Ashmit from "../../assets/playerPhotos/Ashmit.jpeg";
-import Veer from "../../assets/playerPhotos/Veer.jpeg";
+import Veer from "../../assets/playerPhotos/Veer.JPG";
+
 
 
 const PlayersSection = () => {
