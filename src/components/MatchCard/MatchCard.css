@@ -1,29 +1,90 @@
 .match-card {
+  position: relative;
   width: 100%;
-  border: 1px solid #ffffff;
-  background-color: rgba(217, 217, 217, 0.1);
+  max-width: 500px; /* 💪 wider on desktop */
+  margin: 1.5rem auto;
+  background: rgba(92, 108, 244, 0.1); /* subtle purple */
+  border: 1px solid rgba(92, 108, 244, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem 2.5rem; /* extra space for balance */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
-  margin: 1rem 0;
-  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 1px;
   transition: all 0.3s ease;
 }
 
 .match-card:hover {
-  background-color: rgba(217, 217, 217, 0.25);
-  transform: scale(1.02);
+  background: rgba(92, 108, 244, 0.2);
+  transform: translateY(-2px);
 }
 
-.match-card span {
-  font-family: "Anton", sans-serif;
-  color: #ffffff;
-  font-size: 1.5rem;
+/* ✅ RPFC background logo centered perfectly */
+.match-logo-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%; /* fills nicely behind text */
+  height: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0.08;
+  filter: brightness(2) contrast(0.8);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ✅ Three-way equal split layout */
+.match-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between; /* three equal zones */
+  align-items: center;
+  width: 100%;
+}
+
+/* Each column takes equal space */
+.team,
+.mid {
+  flex: 1;
+  text-align: center;
+  color: #fff;
   text-transform: uppercase;
 }
 
-.match-card .mid {
-  opacity: 0.6;
-  font-family: "Inter", sans-serif;
+/* Font sizes and styling */
+.team {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.mid {
+  font-size: 1.4rem;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+/* ✅ Responsive tweaks for mobile */
+@media (max-width: 768px) {
+  .match-card {
+    max-width: 90%;
+    padding: 1.2rem 1.4rem;
+  }
+
+  .match-logo-bg {
+    width: 90%;
+    opacity: 0.1;
+  }
+
+  .team {
+    font-size: 1.2rem;
+  }
+
+  .mid {
+    font-size: 1.1rem;
+  }
 }
