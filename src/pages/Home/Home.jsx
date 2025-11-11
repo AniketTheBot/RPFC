@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import "./Home.css";
-import bg from "/CODE/RPFC/frontend/src/assets/football-field.jpg";
+import bg from "../../assets/football-field.jpg";
 import Header from "../../components/Header/Header";
 import InfoSection from "../../components/InfoSection/InfoSection";
 import MatchesSection from "../../components/MatchesSection/MatchesSection";
 import PlayersSection from "../../components/PlayersSection/PlayersSection";
-import rpfcLogo from "/CODE/RPFC/frontend/src/assets/rpfc-logo.png"; // ✅ your logo path
+import rpfcLogo from "../../assets/rpfc-logo.png"; // ✅ your logo path
 
 const Home = () => {
   // Section refs

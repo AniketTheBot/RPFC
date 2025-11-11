@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 import { FaInstagram } from "react-icons/fa";
-import rpfcLogo from "/CODE/RPFC/frontend/src/assets/rpfc-logo.png"; // ✅ your logo path
+import rpfcLogo from "../../assets/rpfc-logo.png"; // ✅ your logo path
 
 const Header = ({ homeRef, aboutRef, membersRef, matchesRef }) => {
   const handleScroll = (ref) => {

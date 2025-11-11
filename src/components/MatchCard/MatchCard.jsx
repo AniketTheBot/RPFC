@@ -1,6 +1,6 @@
 import React from "react";
 import "./MatchCard.css";
-import rpfcLogo from "/CODE/RPFC/frontend/src/assets/rpfc-logo.png";
+import rpfcLogo from "../../assets/rpfc-logo.png";
 
 const MatchCard = ({ leftTeam, midText, rightTeam }) => {
   return (

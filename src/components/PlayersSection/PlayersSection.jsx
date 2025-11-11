@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import "./PlayersSection.css";
 import PlayerCard from "../PlayerCard/PlayerCard";
 
-import AdityaYadav from "/CODE/RPFC/frontend/src/assets/playerPhotos/AdityaYadav.jpg";
-import AnshumanYadav from "/CODE/RPFC/frontend/src/assets/playerPhotos/AnshumanYadav.jpg";
-import Diwas from "/CODE/RPFC/frontend/src/assets/playerPhotos/Diwas.jpg";
-import LakshAnand from "/CODE/RPFC/frontend/src/assets/playerPhotos/Laksh Anand.jpg";
-import ShaadNoor from "/CODE/RPFC/frontend/src/assets/playerPhotos/ShaadNoor.jpg";
-import ShauryaVeer from "/CODE/RPFC/frontend/src/assets/playerPhotos/ShauryaVeer.jpg";
-import Tarush from "/CODE/RPFC/frontend/src/assets/playerPhotos/Tarush.jpg";
-import Vihaan from "/CODE/RPFC/frontend/src/assets/playerPhotos/vihaan.jpg";
-import Yash from "/CODE/RPFC/frontend/src/assets/playerPhotos/Yash.jpg";
-import Ashmit from "/CODE/RPFC/frontend/src/assets/playerPhotos/Ashmit.jpeg";
-import Veer from "/CODE/RPFC/frontend/src/assets/playerPhotos/Veer.jpeg";
+import AdityaYadav from "../../assets/playerPhotos/AdityaYadav.jpg";
+import AnshumanYadav from "../../assets/playerPhotos/AnshumanYadav.jpg";
+import Diwas from "../../assets/playerPhotos/Diwas.jpg";
+import LakshAnand from "../../assets/playerPhotos/Laksh Anand.jpg";
+import ShaadNoor from "../../assets/playerPhotos/ShaadNoor.jpg";
+import ShauryaVeer from "../../assets/playerPhotos/ShauryaVeer.jpg";
+import Tarush from "../../assets/playerPhotos/Tarush.jpg";
+import Vihaan from "../../assets/playerPhotos/vihaan.jpg";
+import Yash from "../../assets/playerPhotos/Yash.jpg";
+import Ashmit from "../../assets/playerPhotos/Ashmit.jpeg";
+import Veer from "../../assets/playerPhotos/Veer.jpeg";
 
 
 const PlayersSection = () => {
