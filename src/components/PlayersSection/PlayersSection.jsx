@@ -4,7 +4,6 @@ import PlayerCard from "../PlayerCard/PlayerCard";
 
 import AdityaYadav from "/CODE/RPFC/frontend/src/assets/playerPhotos/AdityaYadav.jpg";
 import AnshumanYadav from "/CODE/RPFC/frontend/src/assets/playerPhotos/AnshumanYadav.jpg";
-import BonaAmingo from "/CODE/RPFC/frontend/src/assets/playerPhotos/BonaAmingo.jpg";
 import Diwas from "/CODE/RPFC/frontend/src/assets/playerPhotos/Diwas.jpg";
 import LakshAnand from "/CODE/RPFC/frontend/src/assets/playerPhotos/Laksh Anand.jpg";
 import ShaadNoor from "/CODE/RPFC/frontend/src/assets/playerPhotos/ShaadNoor.jpg";
@@ -12,18 +11,22 @@ import ShauryaVeer from "/CODE/RPFC/frontend/src/assets/playerPhotos/ShauryaVeer
 import Tarush from "/CODE/RPFC/frontend/src/assets/playerPhotos/Tarush.jpg";
 import Vihaan from "/CODE/RPFC/frontend/src/assets/playerPhotos/vihaan.jpg";
 import Yash from "/CODE/RPFC/frontend/src/assets/playerPhotos/Yash.jpg";
+import Ashmit from "/CODE/RPFC/frontend/src/assets/playerPhotos/Ashmit.jpeg";
+import Veer from "/CODE/RPFC/frontend/src/assets/playerPhotos/Veer.jpeg";
+
 
 const PlayersSection = () => {
   const players = [
+    { name: "Ashmit (C)", position: "Midfielder", img: Ashmit },
+    { name: "Veer", position: "Forward", img: Veer },
     { name: "Aditya Yadav", position: "Defence", img: AdityaYadav },
     { name: "Anshuman Yadav", position: "Forward", img: AnshumanYadav },
-    { name: "Aayaan", position: "Forward", img: BonaAmingo },
     { name: "Diwas", position: "Defence", img: Diwas },
     { name: "Laksh Anand", position: "Forward", img: LakshAnand },
     { name: "Shaad Noor", position: "Defence", img: ShaadNoor },
-    { name: "Shaurya Veer", position: "Defence", img: ShauryaVeer },
+    { name: "Shauryavir", position: "Defence", img: ShauryaVeer },
     { name: "Tarush", position: "Defence", img: Tarush },
-    { name: "Vihaan", position: "Mid-fielder", img: Vihaan },
+    { name: "Vihaan", position: "Midfielder", img: Vihaan },
     { name: "Yash", position: "Goalkeeper", img: Yash },
   ];
   const [loadedCount, setLoadedCount] = useState(0);

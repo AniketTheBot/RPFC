@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.css";
 import { FaInstagram } from "react-icons/fa";
+import rpfcLogo from "/CODE/RPFC/frontend/src/assets/rpfc-logo.png"; // ✅ your logo path
 
 const Header = ({ homeRef, aboutRef, membersRef, matchesRef }) => {
   const handleScroll = (ref) => {
@@ -9,10 +10,13 @@ const Header = ({ homeRef, aboutRef, membersRef, matchesRef }) => {
 
   return (
     <header className="navbar">
+      {/* ✅ Left side — clickable logo instead of HOME */}
+      <div className="nav-logo" onClick={() => handleScroll(homeRef)}>
+        <img src={rpfcLogo} alt="RPFC Logo" className="rpfc-nav-logo" />
+      </div>
+
+      {/* ✅ Center links */}
       <ul className="nav-links">
-        <li>
-          <button onClick={() => handleScroll(homeRef)}>HOME</button>
-        </li>
         <li>
           <button onClick={() => handleScroll(aboutRef)}>ABOUT US</button>
         </li>
@@ -24,6 +28,7 @@ const Header = ({ homeRef, aboutRef, membersRef, matchesRef }) => {
         </li>
       </ul>
 
+      {/* ✅ Instagram icon right side */}
       <div className="nav-icon">
         <a
           href="https://www.instagram.com/r.p.fc/"

@@ -5,6 +5,7 @@ import Header from "../../components/Header/Header";
 import InfoSection from "../../components/InfoSection/InfoSection";
 import MatchesSection from "../../components/MatchesSection/MatchesSection";
 import PlayersSection from "../../components/PlayersSection/PlayersSection";
+import rpfcLogo from "/CODE/RPFC/frontend/src/assets/rpfc-logo.png"; // ✅ your logo path
 
 const Home = () => {
   // Section refs
@@ -27,8 +28,18 @@ const Home = () => {
           membersRef={membersRef}
           matchesRef={matchesRef}
         />
+
         <div className="hero-content">
-          <h1 className="rpfc-title">RPFC</h1>
+          <div className="rpfc-wrapper">
+            <h1 className="rpfc-title">RPFC</h1>
+            <a
+              href="https://www.instagram.com/r.p.fc/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={rpfcLogo} alt="RPFC Logo" className="rpfc-hero-logo" />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -55,8 +66,6 @@ const Home = () => {
           </h1>
         </div>
       </section> */}
-
-      
 
       <div ref={aboutRef}>
         <InfoSection />

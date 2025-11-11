@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 500px; /* 💪 wider on desktop */
   margin: 1.5rem auto;
-  background: rgba(92, 108, 244, 0.1); /* subtle purple */
+  background: rgb(92, 64, 143); /* subtle purple */
   border: 1px solid rgba(92, 108, 244, 0.4);
   border-radius: 10px;
   overflow: hidden;

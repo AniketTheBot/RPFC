@@ -9,6 +9,12 @@
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .hero {
   height: 100vh;
   width: 100%;
@@ -35,17 +41,39 @@
   z-index: 5;
 }
 
+/* ✅ RPFC title */
 .rpfc-title {
   font-family: "Climate Crisis", cursive;
   font-size: 12rem;
   font-weight: 900;
   letter-spacing: -5px;
-  color: #5c6cff;
+  color: #190936;
   line-height: 1;
 }
 
+/* ✅ Wrapper for text + logo */
+.rpfc-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+}
 
+/* ✅ Logo beside RPFC text */
+.rpfc-hero-logo {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+}
 
+.rpfc-hero-logo:hover {
+  transform: translateY(5px) scale(1.05);
+}
+
+/* ✅ Responsive: logo below RPFC text on mobile */
 @media (max-width: 768px) {
   .hero {
     min-height: 100vh;
@@ -57,12 +85,31 @@
     transform: scale(1.1); /* extra zoom for iOS safe area */
   }
 
+  .rpfc-wrapper {
+    flex-direction: column; /* stacks logo below */
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .rpfc-hero-logo {
+    width: 100px;
+    transform: none;
+  }
+
   .rpfc-title {
     font-size: clamp(3rem, 18vw, 7rem);
     letter-spacing: -2px;
+    text-align: center;
+  }
+
+  .hero-content {
+    bottom: 40px;
+    right: 0;
+    left: 0;
+    text-align: center;
   }
 }
-
 
 
 .info-section {
@@ -133,7 +180,7 @@
   font-size: 22vw;
   line-height: 75%;
   letter-spacing: -0.06em;
-  color: #5C6FF4;
+  color: #190936;
   text-transform: uppercase;
   white-space: pre-line;
   user-select: none;

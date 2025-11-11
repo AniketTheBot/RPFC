@@ -1,68 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
 .players-section {
-  width: 100vw;
-  background-color: #2C3813;
-  padding: 5vh 2vw;
-  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("src/assets/playerPhotos/TheWholeTeam.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   overflow: hidden;
 }
 
-.players-title {
-  color: #fff;
-  font-family: "Anton", sans-serif;
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 2rem;
+/* ✅ Dark overlay to reduce brightness of background */
+.players-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* darker overlay for contrast */
+  z-index: 0;
 }
 
+/* ✅ All content stays above overlay */
+.players-title,
+.players-scroll,
+.loader-container {
+  position: relative;
+  z-index: 2;
+}
+
+.players-title {
+  font-family: "Anton", sans-serif;
+  color: white;
+  font-size: 4rem;
+  margin: 3rem 0 2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Loader styles */
+.loader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  z-index: 3;
+}
+
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top: 4px solid #ffffff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Scrollable container for players */
 .players-scroll {
   display: flex;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding-bottom: 2vh;
+  flex-wrap: wrap; /* allows multiple rows if needed */
+  justify-content: center; /* ✅ center all player cards horizontally */
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 3rem;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  z-index: 2;
 }
 
+/* hide scrollbar if overflow happens */
 .players-scroll::-webkit-scrollbar {
   display: none;
 }
 
-.loader-container {
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-family: "Anton", sans-serif;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-}
-
-.loader {
-  width: 60px;
-  height: 60px;
-  border: 5px solid rgba(255, 255, 255, 0.2);
-  border-top: 5px solid #ffffff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-bottom: 20px;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Hide the players until all images are loaded */
-.players-scroll.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
 .players-scroll.visible {
   opacity: 1;
-  transition: opacity 0.8s ease;
+  transition: opacity 0.5s ease-in;
 }
 
+.players-scroll.hidden {
+  opacity: 0;
+}
+
+/* ✅ responsive tweaks */
+@media (max-width: 768px) {
+  .players-scroll {
+    flex-wrap: nowrap; /* enables horizontal scroll on phones */
+    justify-content: flex-start; /* aligns to left for horizontal scroll */
+    overflow-x: auto;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+}
